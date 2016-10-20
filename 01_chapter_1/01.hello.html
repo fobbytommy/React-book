@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello React</title>
+	</head>
+	<body>
+		<div id="app">
+			<!-- my app renders here -->
+		</div>
+		<script type="text/javascript" src="../react/build/react.js"></script>
+		<script type="text/javascript" src="../react/build/react-dom.js"></script>
+		<script type="text/javascript">
+			// ReactDOM.render(
+			// 	React.DOM.h1(null, "Hello World!"),
+			// 	document.getElementById("app")
+			// );
+
+			// ReactDOM.render(
+			// 	React.DOM.h1(
+			// 		{
+			// 			id: "my-heading",
+			// 		},
+			// 		"Hello World!"
+			// 	),
+			// 	document.getElementById("app")
+			// );
+
+			// ReactDOM.render(
+			// 	React.DOM.h1(
+			// 		{
+			// 			id: "my-heading"
+			// 		},
+			// 		React.DOM.span(null, "Hello"),
+			// 		" World!"
+			// 	),
+			// 	document.getElementById("app")
+			// );
+
+			// ReactDOM.render(
+			// 	React.DOM.h1(
+			// 		{
+			// 			id: "my-heading"
+			// 		},
+			// 		React.DOM.span(null,
+			// 			React.DOM.em(null, "Hell"),
+			// 			"o"
+			// 		),
+			// 		" World!"
+			// 	),
+			// 	document.getElementById("app")
+			// );
+
+			// ReactDOM.render(
+			// 	React.DOM.h1(
+			// 		{
+			// 			// class: "pretty",
+			// 			// for: "me",
+			// 			className: "pretty",
+			// 			htmlFor: "me"
+			// 		},
+			// 		"Hello World!"
+			// 	),
+			// 	document.getElementById("app")
+			// );
+
+			ReactDOM.render(
+				React.DOM.h1(
+					{
+						// style: "background: black; color: white; font-family: Verdana"
+						style: {
+							background: "black",
+							color: "white",
+							fontFamily: "Verdana"
+						}
+					},
+					"Hello World!"
+				),
+				document.getElementById("app")
+			);
+		</script>
+	</body>
+</html>
