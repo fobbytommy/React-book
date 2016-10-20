@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello Review</title>
+	</head>
+	<body>
+		<div id="app">
+			<!-- to be render here -->
+		</div>
+		<script type="text/javascript" src="../react/build/react.js"></script>
+		<script type="text/javascript" src="../react/build/react-dom.js"></script>
+		<script type="text/javascript">
+			// ReactDOM.render(
+			// 	React.DOM.h1(
+			// 		// attribute
+			// 		null,
+			// 		// child
+			// 		"Hello World!"
+			// 	),
+			// 	document.getElementById("app")
+			// );
+
+			// ReactDOM.render(
+			// 	React.DOM.h1(
+			// 		{
+			// 			className: "h1_color",
+			// 		},
+			// 		React.DOM.span(
+			// 			{
+			// 				className: "hello_text"
+			// 			},
+			// 			"Hello"
+			// 		),
+			// 		" World!"
+			// 	),
+			// 	document.getElementById("app")
+			// );
+
+			ReactDOM.render(
+				React.DOM.h1(
+					{
+						style: {
+							color: "purple",
+							border: "1px solid red"
+						}
+					},
+					"Hello World!"
+				),
+				document.getElementById("app")
+			);
+		</script>
+	</body>
+</html>
