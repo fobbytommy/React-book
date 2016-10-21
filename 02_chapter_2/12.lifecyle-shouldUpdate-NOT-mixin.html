@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lifecycle shouldComponentUpdate - NOT with mixin</title>
+	</head>
+	<body>
+		<div id="app">
+			<!-- app to be rendered here -->
+		</div>
+		<script type="text/javascript" src="../react/build/react-with-addons.js"></script>
+		<script type="text/javascript" src="../react/build/react-dom.js"></script>
+		<script type="text/javascript">
+
+			var Counter = React.createClass({
+				name: 'Counter',
+
+				mixins: [React.addons.PureRenderMixin],
+
+				propTypes: {
+					count: React.PropTypes.number.isRequired,
+				},
+
+				render: function() {
+					console.log(this.name + '::render()');
+					return React.DOM.span(null, this.props.count);
+				}
+			});
+
+			var TextAreaCounter = React.createClass({
+				name: 'TextAreaCounter',
+
+				propTypes: {
+					defaultValue: React.PropTypes.string,
+				},
+
+				getDefaultProps: function() {
+					return {
+						defaultValue: "",
+					};
+				},
+
+				getInitialState: function() {
+					return {
+						text: this.props.defaultValue,
+					};
+				},
+
+				_textChange: function(ev) {
+					this.setState({
+						text: ev.target.value,
+					});
+				},
+
+				render: function() {
+					console.log(this.name + '::render()');
+					var counter = null;
+					if (this.state.text.length > 0) {
+						counter = React.DOM.h3(null,
+							React.createElement(Counter, {
+								count: this.state.text.length,
+							})
+						);
+					}
+					return React.DOM.div(null,
+						React.DOM.textarea({
+							value: this.state.text,
+							onChange: this._textChange,
+						}),
+						counter
+					);
+				}
+			});
+
+			var myTextAreaCounter = ReactDOM.render(
+				React.createElement(TextAreaCounter, {
+					// defaultValue: "Tommy",
+				}),
+				document.getElementById('app')
+			);
+		</script>
+	</body>
+</html>
