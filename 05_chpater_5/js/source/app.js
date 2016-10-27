@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; // always a good idea
 
 import React from 'react';
 import ReactDOM from 'react-dom';

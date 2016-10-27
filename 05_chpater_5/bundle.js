@@ -181,7 +181,7 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 },{}],2:[function(require,module,exports){
-'use strict';
+'use strict'; // always a good idea
 
 var _react = require('react');
 
@@ -222,8 +222,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // var React = require('react');
 
+
+// var Logo = React.createClass({
+// 	render: function() {
+// 		return <div className="Logo" />;
+// 	}
+// });
 var Logo = function (_React$Component) {
 	_inherits(Logo, _React$Component);
 
@@ -243,13 +249,10 @@ var Logo = function (_React$Component) {
 	return Logo;
 }(_react2.default.Component);
 
-exports.default = Logo;
+// module.exports = Logo;
 
-// var Logo = React.createClass({
-// 	render: function() {
-// 		return <div className="Logo" />;
-// 	}
-// });
+
+exports.default = Logo;
 },{"react":173}],4:[function(require,module,exports){
 'use strict';
 

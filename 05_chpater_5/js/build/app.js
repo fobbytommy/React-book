@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; // always a good idea
 
 var _react = require('react');
 
